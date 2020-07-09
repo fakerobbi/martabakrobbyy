@@ -24,7 +24,7 @@
 
 <!-- Restaurant Menu Section -->
   <div id="restaurant-menu">
-    <div class="section-title text-center center">
+    <div class="section-title text-center center" style="background-image: url({{asset('img/menu-bg.jpg')}});">
       <div class="overlay">
         <h2>Menu</h2>
         <hr>
