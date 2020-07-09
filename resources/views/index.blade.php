@@ -3,7 +3,7 @@
 @section('content')
 
 <!-- About Section -->
-<div id="about" class="animated animatedFadeInUp fadeInUp">
+<div id="about">
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-md-6 ">
@@ -23,7 +23,7 @@
 <!-- End About Section -->
 
 <!-- Restaurant Menu Section -->
-  <div id="restaurant-menu" class="animated animatedFadeInUp fadeInUp">
+  <div id="restaurant-menu">
     <div class="section-title text-center center">
       <div class="overlay">
         <h2>Menu</h2>
