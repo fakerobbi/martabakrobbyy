@@ -63,7 +63,7 @@
 </nav>
 <!-- Header -->
 <header id="header">
-  <div class="intro" style="background-image: url({{asset('img/intro-bg.jpg')}})">
+  <div class="intro" style="background-image: url({{asset('img/intro-bg.jpg')}});">
     <div class="overlay">
       <div class="container">
         <div class="row">
