@@ -7,7 +7,7 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-md-6 ">
-          <div class="about-img"><img src="{{asset('img/about.jpg')}}" class="img-responsive" alt=""></div>
+          <div class="about-img"><img src="{{asset('img/intro-bg.jpg')}}" class="img-responsive" alt=""></div>
         </div>
         <div class="col-xs-12 col-md-6">
           <div class="about-text ">
@@ -108,7 +108,7 @@
         <hr>
         <p><strong> buat kamu yang lagi males keluar tapi pengen nyobain Martabak Robby, 
           tenang aja sekarang Martabak Robby sudah hadir diGofood jadi jangan sampai kehabisan ya!</strong></p>
-          <button href="gojek.com" class="btn btn-custom btn-lg">Order Now</button><br>
+          <a href="https://gofood.link/u/ejLO9"><button class="btn btn-custom btn-lg">Order Now</button></a><br>
           <img src="{{asset('img/')}}/gofood.png" width="20%" alt="">   
       </div>
     </div>
