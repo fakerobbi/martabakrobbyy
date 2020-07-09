@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Branch;
+use App\Message;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\User;
@@ -18,6 +19,7 @@ class CabangController extends Controller
     public function index()
     {
         $data['branches'] = Branch::all();
+        $data['messages'] = Message::paginate(3);
         return view('backend.cabang.index',$data);
     }
 
@@ -29,6 +31,7 @@ class CabangController extends Controller
     public function create()
     {
         $data['users'] = User::all();
+        $data['messages'] = Message::paginate(3);
         return view('backend.cabang.create',$data);
     }
 
@@ -75,6 +78,7 @@ class CabangController extends Controller
     public function edit($id)
     {
         $data['users'] = User::all();
+        $data['messages'] = Message::paginate(3);
 
         $items = Branch::findOrFail($id);
         return view(

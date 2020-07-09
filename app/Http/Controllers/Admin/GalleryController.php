@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 use App\User;
 use App\Gallery;
+use App\Message;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -16,6 +17,7 @@ class GalleryController extends Controller
     public function index()
     {
         $data['galleries'] = Gallery::all();
+        $data['messages'] = Message::paginate(3);
         return view('backend.gallery.index',$data);  
     }
 
@@ -27,6 +29,7 @@ class GalleryController extends Controller
     public function create()
     {
         $data['users'] = User::all();
+        $data['messages'] = Message::paginate(3);
         return view('backend.gallery.create',$data);
     }
 
@@ -79,6 +82,7 @@ class GalleryController extends Controller
     public function edit($id)
     {
         $data['users'] = User::all();
+        $data['messages'] = Message::paginate(3);
 
         $items = Gallery::findOrFail($id);
         return view(

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Menu;
 use App\User;
+use App\Message;
 use Alert;
 use Illuminate\Http\Request;
 
@@ -18,6 +19,7 @@ class MenuController extends Controller
     public function index()
     {
         $data['menus'] = Menu::all();
+        $data['messages'] = Message::paginate(3);
         return view('backend.menu.index',$data);
     }
 
@@ -29,6 +31,7 @@ class MenuController extends Controller
     public function create()
     {
         $data['users'] = User::all();
+        $data['messages'] = Message::paginate(3);
         return view('backend.menu.create',$data);
     }
 
@@ -75,6 +78,7 @@ class MenuController extends Controller
     public function edit($id)
     {
         $data['users'] = User::all();
+        $data['messages'] = Message::paginate(3);
 
         $items = Menu::findOrFail($id);
         return view(
