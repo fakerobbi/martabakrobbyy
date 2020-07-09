@@ -135,16 +135,6 @@
                     </div>
                     @endforeach
                   </div>
-                <div class="item">
-                  <div class="carousel-col">
-                    <div><a href="img/about.jpg"><img src="img/about.jpg" class="img-responsive"></a></div>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="carousel-col">
-                    <div><a href="img/about.jpg"><img src="img/about.jpg" class="img-responsive"></a></div>
-                  </div>
-                </div>
               </div>
       
               <!-- Controls -->
