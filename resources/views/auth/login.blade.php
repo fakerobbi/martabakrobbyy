@@ -35,14 +35,6 @@
             {{ __('Login') }}
         </button>
         </form>
-        <div class="text-center">
-          <a class="d-block small mt-3" href="{{ url('/register') }}">Register an Account</a>
-          @if (Route::has('password.request'))
-            <a class="d-block small mt-1" href="{{ route('password.request') }}">
-                {{ __('Forgot Your Password?') }}
-            </a>
-          @endif
-        </div>
       </div>
     </div>
   </div>

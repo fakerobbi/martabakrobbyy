@@ -16,6 +16,9 @@ class MenuController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
+
     public function index()
     {
         $data['menus'] = Menu::all();
@@ -28,6 +31,8 @@ class MenuController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
     public function create()
     {
         $data['users'] = User::all();
@@ -41,6 +46,9 @@ class MenuController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+
+
     public function store(Request $request)
     {
         $request->validate([
@@ -75,6 +83,10 @@ class MenuController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+
+
+
     public function edit($id)
     {
         $data['users'] = User::all();
@@ -97,6 +109,10 @@ class MenuController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+
+
+
     public function update(Request $request, $id)
     {
         Menu::where('id', $id)
@@ -118,6 +134,8 @@ class MenuController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+
     public function destroy(Request $request)
     {
         $menu = Menu::findOrFail($request->id);
@@ -126,3 +144,5 @@ class MenuController extends Controller
         return redirect()->route('admin.menu.index');
     }
 }
+
+
