@@ -10,7 +10,7 @@
             <h2>About Us</h2>
             <hr>
             <p>Martabak Robby merupakan sebuah bisnis yang bergerak dalam bidang kuliner makanan. Didirikan sejak tahun 2000 dengan konsep kaki lima. </p>
-            <p>Nama Robby sendiri itu diambil dari nama anak ketiga dari bapak Rosidi. Saat ini martabak Robby sudah memiliki cabang lebih dari 10 dan tersebar didaerah Bekasi utara, Babelan.</p>
+            <p>Nama Robby sendiri itu diambil dari nama anak ketiga dari bapak Rosidi. Saat ini martabak Robby sudah memiliki cabang lebih dari 5 dan tersebar didaerah Bekasi utara, Babelan.</p>
           </div>
         </div>
       </div>
