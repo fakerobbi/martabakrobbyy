@@ -52,10 +52,16 @@ class CabangController extends Controller
         $branch->person_in_charge = $request->person_in_charge;
         $branch->phone_number = $request->phone_number;
         $branch->address = $request->address;
+        if ($request->file('input_picture')) {
+            $fileGet = $request->input_picture;
+            $fileName = $fileGet->getClientOriginalName();
+            $move = $fileGet->move('uploads/branch', $fileName);
+            $branch->input_picture = $fileName;
+        }
         $branch->save();
         
         alert()->success('Cabang Berhasil Ditambahkan', 'Sukses');
-        return redirect()->route('admin.cabang.index');
+        return redirect()->route('admin.cabang.create');
     }
 
     /**
@@ -101,7 +107,12 @@ class CabangController extends Controller
      */
     public function update(Request $request, $id)
     {
-    
+        if ($request->file('input_picture')) {
+            $fileGet = $request->input_picture;
+            $fileName = $fileGet->getClientOriginalName();
+            $move = $fileGet->move('uploads/branch', $fileName);
+        }
+
         Branch::where('id', $id)
             ->update([
                 'branch_name' => $request->branch_name,

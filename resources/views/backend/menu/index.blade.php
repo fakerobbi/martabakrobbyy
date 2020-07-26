@@ -20,6 +20,7 @@
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
               <thead>
                 <tr>
+                  <th>Foto Menu</th>
                   <th>Nama Menu</th>
                   <th>Harga</th>
                   <th>Kategori</th>
@@ -30,6 +31,12 @@
               <tbody>
                   @foreach ($menus as $item)
                     <tr>
+                      <td>
+                        @if ($item->input_picture)
+                        <img src="{{ asset('uploads/menu/' . $item->input_picture) }}" class="img-fluid"
+                            alt="" width="30%">
+                        @endif
+                      </td>
                       <td>{{ $item->product_name }}</td>
                       <td>{{ $item->product_price }}</td>
                       <td>{{ $item->category }}</td>

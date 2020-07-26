@@ -58,6 +58,19 @@
                             <label for="input_text">Dekskripsi</label>
                             <textarea name="description" id="description" class="form-control" cols="60" rows="10">{{ $items->description }}</textarea>
                         </div>
+
+                        <div class="form-group col-md-12">
+                          <label for="input_file">Masukan Gambar</label><br>
+                          <div class="input-group mb-3 col-md-12">
+                              <div class="input-group-prepend">
+                                  <span class="input-group-text">Upload</span>
+                              </div>
+                              <div class="custom-file">
+                                  <input type="file" class="custom-file-input" id="input_picture"
+                                      name="input_picture">
+                                  <label class="custom-file-label" for="input_picture">Pilih Gambar</label>
+                              </div>
+                          </div>
                         <button class="btn btn-primary col-lg-12" type="submit">Ubah</button>
                         <a href="{{ route('admin.menu.index') }}"
                         class="btn btn-danger col-12 mt-1">Batalkan</a>

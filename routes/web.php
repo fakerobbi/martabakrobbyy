@@ -13,7 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/','IndexController@index');
+Route::get('/','IndexController@index');;
+Route::get('/Menu','MenuController@index');
+Route::get('/Branch','BranchController@index');
+Route::get('/Contact','ContactController@index');
 
 Auth::routes();
 

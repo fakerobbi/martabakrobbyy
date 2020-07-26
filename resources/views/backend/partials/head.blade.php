@@ -5,6 +5,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Martabak Robby Admin</title>
+    <link rel="shortcut icon" href="{{ asset('images/admin.png') }}">
     <!-- Bootstrap core CSS-->
     <link href="{{asset('backend/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
     <!-- Custom fonts for this template-->

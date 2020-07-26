@@ -20,6 +20,7 @@
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
               <thead>
                 <tr>
+                  <th>Foto Cabang</th>
                   <th>Nama Cabang</th>
                   <th>Penanggung Jawab</th>
                   <th>No Telepon</th>
@@ -31,6 +32,12 @@
                   @foreach ($branches as $item)
                       
                   <tr>
+                      <td>
+                        @if ($item->input_picture)
+                        <img src="{{ asset('uploads/branch/' . $item->input_picture) }}" class="img-fluid"
+                            alt="" width="30%">
+                        @endif
+                      </td>
                       <td>{{ $item->branch_name }}</td>
                       <td>{{ $item->person_in_charge }}</td>
                       <td>{{ $item->phone_number }}</td>

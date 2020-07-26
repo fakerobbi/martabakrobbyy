@@ -60,10 +60,16 @@ class MenuController extends Controller
         $menu->product_price = $request->product_price;
         $menu->category = $request->category;
         $menu->description = $request->description;
+        if ($request->file('input_picture')) {
+            $fileGet = $request->input_picture;
+            $fileName = $fileGet->getClientOriginalName();
+            $move = $fileGet->move('uploads/menu', $fileName);
+            $menu->input_picture = $fileName;
+        }
         $menu->save();
         
         alert()->success('Menu Berhasil Ditambahkan', 'Sukses');
-        return redirect()->route('admin.menu.index');
+        return redirect()->route('admin.menu.create');
     }
 
     /**
@@ -115,6 +121,12 @@ class MenuController extends Controller
 
     public function update(Request $request, $id)
     {
+        if ($request->file('input_picture')) {
+            $fileGet = $request->input_picture;
+            $fileName = $fileGet->getClientOriginalName();
+            $move = $fileGet->move('uploads/menu', $fileName);
+        }
+
         Menu::where('id', $id)
             ->update([
                 'product_name' => $request->product_name,
